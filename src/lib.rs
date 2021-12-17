@@ -36,7 +36,7 @@ fn check_nft_type<'a>(nft_type: &'a Script) -> impl Fn(&Script) -> bool + 'a {
     }
 }
 
-fn check_factory_type<'a>(nft_type: &'a Script) -> impl Fn(&Script) -> bool + 'a {
+pub fn check_factory_type<'a>(nft_type: &'a Script) -> impl Fn(&Script) -> bool + 'a {
     let nft_type_args: Bytes = nft_type.args().unpack();
     move |unknown_type: &Script| {
         unknown_type.code_hash().as_slice()
