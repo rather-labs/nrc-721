@@ -1,5 +1,5 @@
 [package]
-name = "nft_base"
+name = "nrc_721"
 version = "0.1.0"
 edition = "2018"
 
