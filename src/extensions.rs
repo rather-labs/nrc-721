@@ -7,8 +7,9 @@ use ckb_std::{
 use core::result::Result;
 
 /// This extension checks if at least one input cell has the same lock as factory.
+#[cfg(feature = "only_owner")]
 pub struct OnlyOwner;
-
+#[cfg(feature = "only_owner")]
 impl OnlyOwner {
     pub fn handle_creation(nft_type: &Script) -> Result<(), Error> {
         let factory_lock_script: Script = QueryIter::new(load_cell_type, Source::CellDep)
