@@ -8,3 +8,6 @@ edition = "2018"
 [dependencies]
 ckb-std = "0.9.0"
 blake2b-rs = "0.2.0"
+
+[features]
+only_owner = []
